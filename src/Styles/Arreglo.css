@@ -1,0 +1,60 @@
+.Arreglo{
+    width: 100%;
+    gap:10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    overflow: hidden;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.item>h2{
+    font-weight: bold;
+}
+.item>img{
+    width: 200px;
+    height: 300px;
+}
+
+.item>img:hover{
+    border: 2px solid violet;
+    opacity: 0.7;
+}
+
+
+
+.item>.Vista{
+    display: flex;
+    gap: 5px;
+}
+
+.item>.Vista>img{
+    width: 20px;
+    height: 20px;
+}
+
+@media screen and (max-width:768px){
+    .item>h2{
+        font-weight: bold;
+        text-align: center;
+    }
+    .item>img{
+        width: 250px;
+        height: 250px;
+        display: block;
+        margin:auto;
+    }
+
+    .item>.Vista{
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+    }
+    
+   .item>span{
+    text-align: center;
+   }
+}

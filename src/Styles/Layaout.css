@@ -1,0 +1,70 @@
+.input{
+    display: flex;
+    gap:3px;
+}
+.cerrar{
+    display: none;
+}
+.cabezara{
+    display : flex;
+    gap:10px;
+}
+
+.datos{
+    display: flex;
+    gap:25px;
+    margin-bottom: 5px;
+}
+@media screen and (max-width: 768px){
+    .mobile{
+        display: flex;
+        background: rgba(17,24,39);
+        color: white;
+        justify-content: center; 
+        gap:35px;
+        width: 100%;
+        height: 80px;
+        align-items: center;
+    }
+    .mobile>.icono{
+        font-size: 25px;
+        color: white;
+    }
+
+    .icono-data{
+        display: none;
+    }
+
+    .data{
+        display: none;
+    }
+
+    .datos{
+        z-index: 20;
+        width: 40%;
+        background-color: black;
+        height: 280px;
+        width: 100%;
+        position: relative;
+    }
+    .cerrar{
+        display: block;
+        font-size: 25px;
+        font-weight: bold;
+        position: absolute;
+        left: 46%;
+        top:15px;
+    }
+
+    .cabezara{
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+        margin-left: 40%;
+        text-align: center;}
+
+    .input{
+        display: none;
+    }
+    
+}

@@ -1,0 +1,146 @@
+.Container-TV{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: rgba(17,24,39,0.8);
+    color: white;
+}
+
+.Header-Tv{
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    height: 100px;
+}
+.Header-Tv>h1{
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+}
+.Lista-Botones{
+    display: flex;
+    justify-content: center;
+    gap:8px;
+}
+
+.Lista-Botones>li>.Botones-lista{
+    font-size: 5px;
+    color: white;
+    background: rgba(83, 82, 82,0.5);
+    padding: 10px 12px;
+    font-size: 9px;
+    border-radius: 10px;
+    font-weight:bolder;
+}
+
+.Lista-Botones>.Emoticon{
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+
+}
+
+
+.Lista-Botones>li>.Botones-lista:hover{
+    background: rgba(83, 82, 82,0.9);
+    color: yellow;
+}
+
+.Contenedor{
+    width: 100%;
+}
+
+.main2{
+    margin-top: 20px;
+    width:100%;
+    height: 100%;
+    
+}
+
+.listado2{
+    list-style: none;
+      margin: 0;
+      padding: 0;
+    
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+     
+      width: 100%;
+      gap: 52px;
+    }
+
+    .lista2>h2{
+        text-align: center;
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    .lista2>img:hover{
+        border: 2px solid violet;
+        opacity: 0.8;
+    }
+
+    .movie-star2{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .movie-star2>img{
+        width: 15px;
+        height: 15px;
+        margin-top: 5px;
+    }
+
+
+
+    .lista2>h2{
+        justify-content: center;
+        font-weight: bolder;
+    }
+
+@media screen and (max-width: 768px){
+    .Lista-Botones{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap:8px;
+    }
+
+    .main2{
+        margin-top: 100px;
+        width:100%;
+        height: 100%;
+    }
+
+    .listado2{
+        list-style: none;
+          margin: 0;
+          padding: 0;
+        
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 100%;
+          gap: 22px;
+        }
+    .lista2>img{
+        display: block;
+        margin: auto;
+        width: 250px;
+        height: 250px;
+    }
+
+    .lista2>img:hover{
+        border: 2px solid violet;
+        opacity: 0.7;
+    }
+
+    .lista2>h2{
+        text-align: center;
+        font-weight: bold;
+    }
+
+
+}
