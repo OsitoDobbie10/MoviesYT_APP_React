@@ -65,7 +65,7 @@ const Layaout = () => {
         <input 
         value={searchmovies2}
         onChange={handleChange}
-        className='flex items-center w-15 justify-center outline-none h-6 bg-transparent text-white text-sm md:w-56 mt-3 rounded border-inherit mb-3 border-solid'
+        className='flex items-center w-15 justify-center outline-none h-6 bg-transparent text-yellow-300 text-sm md:w-12 mt-3 rounded border-inherit mb-3 border-solid'
         type="text"
         placeholder='Buscar Peliculas'/>
         </div>
