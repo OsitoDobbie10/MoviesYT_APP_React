@@ -13,7 +13,7 @@ const Peliculas = () => {
 const GenerosMovies = useLoaderData();
 const [mostarpeliculas,setMostrarpeliculas] = useState(true)
 const {searchmovies1,stade2} = CallContext();
-const {arregleAllMovies,arreglofilter,cambiarfiltro,FilterMovies,ChangeValue,loading} = CustomPeliculas();
+const {arregleAllMovies,arreglofilter,cambiarfiltro,FilterMovies,ChangeValue,loading,changepage} = CustomPeliculas();
 setTimeout(()=>{
   setMostrarpeliculas(false);
 },3000)
@@ -53,6 +53,7 @@ if (mostarpeliculas) return <Spinner/>
     movies2={arreglofilter}
     condicion={cambiarfiltro}
     spinner={loading}
+    changepage={changepage}
     />
     </section>
     </div>

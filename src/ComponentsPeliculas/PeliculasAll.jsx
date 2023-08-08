@@ -6,7 +6,7 @@ import Spinner from '../Componets/Spinner';
 import '../Styles/PeliculasAll.css'
 import { useNavigate } from 'react-router-dom';
 const PeliculasAll = (props) => {
- const {movies1,movies2,condicion,loading} = props;
+ const {movies1,movies2,condicion,loading,changepage} = props;
  const navegar2 = useNavigate();
   return (
     <div className='main' id='ContenedorMovies'>
@@ -40,8 +40,11 @@ const PeliculasAll = (props) => {
                         <h1 className='text-center font-bold'>{movie.fecharealizada}</h1>
                       </li>
             })
-            }
+            }  
       </ul>
+      <button
+             className='block mx-auto mb-2  px-3 py-2 bg-orange-300 text-white hover:text-black' 
+             onClick={changepage}>Ver mas resultados</button>
  </div>
   )
 }

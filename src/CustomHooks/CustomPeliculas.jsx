@@ -12,6 +12,7 @@ const CustomPeliculas = () => {
     const [cambiarfiltro,setCambiarfiltro] = useState(true);
     const [loading,setLoading] = useState(true);
     useEffect(()=>{
+        setLoading(true);
         GetAllMovies(PaginaMovies)
         .then((gis2)=>{
           const gisnew = gis2.filter((value,index)=>gis2.indexOf(value) === index);
@@ -19,6 +20,7 @@ const CustomPeliculas = () => {
           setLoading(false);
         })
       },[PaginaMovies])
+      /*
       const Handlescroll = ()=>{
         let height = document.documentElement.scrollHeight;
         let top = document.documentElement.scrollTop;
@@ -31,7 +33,10 @@ const CustomPeliculas = () => {
       }
       useEffect(()=>{
         window.addEventListener('scroll',Handlescroll)
-      },[])
+      },[])*/
+      const changepage = ()=>{
+        setPaginaMovies(PaginaMovies + 1);
+      }
       
       const FilterMovies = (id)=>{
         const arreglofilter = arregleAllMovies.filter((data)=>data.generos.includes(id))
@@ -41,7 +46,7 @@ const CustomPeliculas = () => {
         setCambiarfiltro(false);
         }
 
-  return{arregleAllMovies,arreglofilter,arreglogenres,cambiarfiltro,FilterMovies,ChangeValue,loading}
+  return{arregleAllMovies,arreglofilter,arreglogenres,cambiarfiltro,FilterMovies,ChangeValue,loading,changepage}
 }
 
 export default CustomPeliculas
