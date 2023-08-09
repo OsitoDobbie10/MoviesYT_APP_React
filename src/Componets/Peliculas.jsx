@@ -18,6 +18,7 @@ setTimeout(()=>{
   setMostrarpeliculas(false);
 },3000)
 if (mostarpeliculas) return <Spinner/>
+console.log(GenerosMovies);
   return (
     <div className="TodoPelis">
       {
