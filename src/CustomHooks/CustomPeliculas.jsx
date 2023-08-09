@@ -1,5 +1,5 @@
 import CallContext from './CallContext'
-import { useState, useEffect } from 'react'
+import { useState, useEffect , useMemo} from 'react'
 import { GetAllMovies } from "../API/GetMovies";
 
 const CustomPeliculas = () => {
@@ -46,6 +46,7 @@ const CustomPeliculas = () => {
         setCambiarfiltro(false);
         }
 
+       
   return{arregleAllMovies,arreglofilter,arreglogenres,cambiarfiltro,FilterMovies,ChangeValue,loading,changepage}
 }
 

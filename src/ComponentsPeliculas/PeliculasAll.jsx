@@ -42,9 +42,10 @@ const PeliculasAll = (props) => {
             })
             }  
       </ul>
-      <button
-             className='block mx-auto mb-2  px-3 py-2 bg-orange-300 text-white hover:text-black' 
-             onClick={changepage}>Ver mas resultados</button>
+    {
+      condicion &&   <button className='block mx-auto mb-2  px-3 py-2 bg-orange-300 text-white hover:text-black' 
+      onClick={changepage}>Ver mas resultados</button>
+    }
  </div>
   )
 }

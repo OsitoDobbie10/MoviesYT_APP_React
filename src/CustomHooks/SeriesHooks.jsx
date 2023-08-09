@@ -17,7 +17,7 @@ const SeriesHooks = () => {
           setLoadingTv(false);
         })
       },[paginaseries])
-
+      /*
       const HandleTv = ()=>{
         let height = document.documentElement.scrollHeight;
         let top = document.documentElement.scrollTop;
@@ -30,7 +30,11 @@ const SeriesHooks = () => {
     
        useEffect(()=>{
         window.addEventListener('scroll',HandleTv)
-       },[])
+       },[])*/
+
+       const changeseries = ()=>{
+        setPaginaseries(paginaseries + 1)
+       }
     
        const ChangeSerieF = ()=>{
         setChangeserie(false);
@@ -40,7 +44,7 @@ const SeriesHooks = () => {
             setTvarregloCopia(seriefilter);
     
         }
-  return {seriesTv,tvarregloCopia,changeserie,ChangeSerieF,FiltrarSerie} 
+  return {seriesTv,tvarregloCopia,changeserie,ChangeSerieF,FiltrarSerie,changeseries} 
 
 }
 

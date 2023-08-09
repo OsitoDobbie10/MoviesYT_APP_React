@@ -4,7 +4,7 @@ import '../Styles/Series.css';
 import Estrella from '../Files/estrella.png';
 
 const SeriesAll = (props) => {
-    const {series1,series2,condicion} = props
+    const {series1,series2,condicion,changeseries} = props
     const naveg = useNavigate();
   return (
     <div className='main2' id='ContenedorMovies2'>
@@ -40,7 +40,11 @@ const SeriesAll = (props) => {
                     </li>
           })
           }
-</ul>
+    </ul>
+    {
+      condicion &&  <button className='block mx-auto mb-2  px-3 py-2 bg-orange-300 text-white hover:text-black' 
+                    onClick={changeseries}>Ver mas resultados</button>
+    }
     
   </div>
   )

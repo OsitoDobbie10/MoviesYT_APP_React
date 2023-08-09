@@ -15,7 +15,7 @@ const Series = () => {
   const [mostrarseries,setMostrarseries] = useState(true);
   const arreglogenres2 = useLoaderData();
   const {searchmovies1,stade2} = CallContext();
-  const {seriesTv,tvarregloCopia,changeserie,ChangeSerieF,FiltrarSerie} = SeriesHooks();
+  const {seriesTv,tvarregloCopia,changeserie,ChangeSerieF,FiltrarSerie,changeseries} = SeriesHooks();
   setTimeout(()=>{
     setMostrarseries(false)
   },3000)
@@ -48,7 +48,9 @@ const Series = () => {
       <SeriesAll 
       series1={seriesTv}
       series2={tvarregloCopia}
-      condicion={changeserie}/>
+      condicion={changeserie}
+      changeseries={changeseries}
+      />
       </section>
       <Footer/>
     </div>
