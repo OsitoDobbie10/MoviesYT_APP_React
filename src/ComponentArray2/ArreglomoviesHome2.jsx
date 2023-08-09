@@ -6,7 +6,7 @@ const ArregloMoviesHome2 = (props) => {
   return (
     <div className='Arreglo'>
         {
-            peliculas.slice(0, 15).map((gis)=>{
+            peliculas.slice(0, 5).map((gis)=>{
                 return <Item2 
                         key={gis.id}
                         data={gis}/>
