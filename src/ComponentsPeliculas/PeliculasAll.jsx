@@ -10,7 +10,7 @@ const PeliculasAll = (props) => {
  const navegar2 = useNavigate();
   return (
     <div className='main' id='ContenedorMovies'>
-      <ul className='listado'>
+      <ul className='listado'> 
             {
                 condicion ? movies1.map((movie)=>{
                   return <li className='lista-movie' key={movie.id}>
@@ -25,7 +25,7 @@ const PeliculasAll = (props) => {
                           </div>
                           <h2>{movie.fecharealizada}</h2>
                         </li>}):
-              movies2.map((movie)=>{
+              movies2.filter((value,index)=>movies2.indexOf(value) === index).map((movie)=>{
                 return <li className='lista-movie' key={movie.id}>
                         <img
                         onClick={()=>navegar2(`/Movies/${movie.id}/objeto`)}

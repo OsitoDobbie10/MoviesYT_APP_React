@@ -45,6 +45,7 @@ const CustomPeliculas = () => {
        const ChangeValue = ()=>{
         setCambiarfiltro(false);
         }
+        
 
        
   return{arregleAllMovies,arreglofilter,arreglogenres,cambiarfiltro,FilterMovies,ChangeValue,loading,changepage}
