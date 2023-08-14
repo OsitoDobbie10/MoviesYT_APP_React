@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import CallContext from './CallContext'
 import { GetTVranted } from '../API/GetMovies';
+import AllSeries from '../API/AllSeries';
 const SeriesHooks = () => {
     const {seriesTv,
         setSeriesTv,
@@ -40,8 +41,13 @@ const SeriesHooks = () => {
         setChangeserie(false);
         }
         const FiltrarSerie = (id)=>{
-            const seriefilter = seriesTv.filter((tv)=>tv.generos.includes(id)); 
-            setTvarregloCopia(seriefilter);
+            if(id===1){
+              setSeriesTv(AllSeries)
+            }
+            else{
+              const seriefilter = seriesTv.filter((tv)=>tv.generos.includes(id)); 
+              setSeriesTv(seriefilter);
+            }
     
         }
   return {seriesTv,tvarregloCopia,changeserie,ChangeSerieF,FiltrarSerie,changeseries} 

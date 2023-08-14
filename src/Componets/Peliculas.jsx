@@ -17,8 +17,10 @@ const {arregleAllMovies,arreglofilter,cambiarfiltro,FilterMovies,ChangeValue,loa
 setTimeout(()=>{
   setMostrarpeliculas(false);
 },3000)
+const botones = [...GenerosMovies];
+const objetonuevo = {id: 1, name: 'Todos'};
+const botonesarray = botones.concat(objetonuevo);
 if (mostarpeliculas) return <Spinner/>
-console.log(GenerosMovies);
   return (
     <div className="TodoPelis">
       {
@@ -27,16 +29,10 @@ console.log(GenerosMovies);
       <ScrollToTop/>
     <div className="PELIS">
     <div className='Header-Tv2'>
-        <h1>Filtro de generos de Peliculas</h1>
-        <h2 
-        style={{
-          textAlign:'center',
-          fontWeight:'bold',
-          marginBottom:'10px'
-        }}>Haz primero un click en el botom y luego doble click </h2>
+        <h1>Filtro de generos de Peliculas por su genero</h1>
         <ul className='Lista-Botones2'>
           {
-            GenerosMovies.map((data)=>{
+            botonesarray.map((data)=>{
               return  <li key={data.id}>
                        <button 
                        onClick={()=>FilterMovies(data.id)}
@@ -51,8 +47,6 @@ console.log(GenerosMovies);
     <section className="Contenedor">
     <PeliculasAll 
     movies1={arregleAllMovies}
-    movies2={arreglofilter}
-    condicion={cambiarfiltro}
     spinner={loading}
     changepage={changepage}
     />

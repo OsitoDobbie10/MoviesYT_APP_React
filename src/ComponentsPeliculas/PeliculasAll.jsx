@@ -6,13 +6,14 @@ import Spinner from '../Componets/Spinner';
 import '../Styles/PeliculasAll.css'
 import { useNavigate } from 'react-router-dom';
 const PeliculasAll = (props) => {
- const {movies1,movies2,condicion,loading,changepage} = props;
+ const {movies1,loading,changepage} = props;
  const navegar2 = useNavigate();
+ //console.log(JSON.stringify(movies1,null,2))
   return (
     <div className='main' id='ContenedorMovies'>
       <ul className='listado'> 
             {
-                condicion ? movies1.map((movie)=>{
+                 movies1.map((movie)=>{
                   return <li className='lista-movie' key={movie.id}>
                           <img 
                           onClick={()=>navegar2(`/Movies/${movie.id}/objeto`)}
@@ -24,28 +25,11 @@ const PeliculasAll = (props) => {
                           <span>{movie.votopopular}</span>
                           </div>
                           <h2>{movie.fecharealizada}</h2>
-                        </li>}):
-              movies2.filter((value,index)=>movies2.indexOf(value) === index).map((movie)=>{
-                return <li className='lista-movie' key={movie.id}>
-                        <img
-                        onClick={()=>navegar2(`/Movies/${movie.id}/objeto`)}
-                        src={movie.imagen}
-                        alt={movie.idx}
-                        className='block m-auto' />
-                        <h2>{movie.titulo}</h2>
-                        <div className='flex justify-center gap-2'>
-                        <img src={Estrella} alt="Estrella" className='w-2 h-2 mt-1'/>
-                        <span className='font-bold'>{movie.votopopular}</span>
-                        </div>
-                        <h1 className='text-center font-bold'>{movie.fecharealizada}</h1>
-                      </li>
-            })
+                        </li>})
             }  
       </ul>
-    {
-      condicion &&   <button className='block mx-auto mb-2  px-3 py-2 bg-orange-300 text-white hover:text-black' 
+   <button className='block mx-auto mb-2  px-3 py-2 bg-orange-300 text-white hover:text-black' 
       onClick={changepage}>Ver mas resultados</button>
-    }
  </div>
   )
 }

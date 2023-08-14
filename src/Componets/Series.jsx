@@ -19,7 +19,9 @@ const Series = () => {
   setTimeout(()=>{
     setMostrarseries(false)
   },3000)
-
+  const botonesseries = [...arreglogenres2]; 
+  const objeto = {id: 1, name: 'Todos'};
+  const botonseriesNew = botonesseries.concat(objeto)
   if (mostrarseries) return <Spinner/>
   return (
     <div className='Container-TV'>
@@ -31,7 +33,7 @@ const Series = () => {
         <h1>Filtro de generos de TV series</h1>
         <ul className='Lista-Botones'>
           {
-            arreglogenres2.map((data)=>{
+            botonseriesNew.map((data)=>{
               return  <li key={data.id}>
                        <button 
                        onClick={()=>FiltrarSerie(data.id)}
@@ -47,8 +49,8 @@ const Series = () => {
       <section className="Contenedor">
       <SeriesAll 
       series1={seriesTv}
-      series2={tvarregloCopia}
-      condicion={changeserie}
+      //series2={tvarregloCopia}
+      //condicion={changeserie}
       changeseries={changeseries}
       />
       </section>

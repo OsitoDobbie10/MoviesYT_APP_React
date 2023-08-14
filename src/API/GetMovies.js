@@ -44,7 +44,7 @@ export const GetTVranted = async(paginaseries)=>{
       Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjNjU1MmYwOTZiZTg0YzhjNGQxY2JiNTUzNTQ0OWM0OCIsInN1YiI6IjY0YjhhMzRhNGQyM2RkMDEwNjk2MDYyNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.tgD4Z3dS5E-OYscZAemQhrKTUi8vp4WxCPpggbHfoK8'
     }
   };
-  const urlTVRanted = `https://api.themoviedb.org/3/tv/top_rated?language=es-ES&page=${paginaseries}`;
+  const urlTVRanted = `https://api.themoviedb.org/3/tv/top_rated?language=en-US&page=${paginaseries}`;
   const data = await fetch(urlTVRanted,options);
   const response = await data.json();
   const {results} = response;
@@ -75,8 +75,6 @@ export const GetTVranted = async(paginaseries)=>{
  const Final = Moviearray(Copianewarray)
  return Final 
 }
-
-
 //Movies DATA
 export const GetAllMovies = async(PaginaMovies)=>{
   const options = {
@@ -86,7 +84,7 @@ export const GetAllMovies = async(PaginaMovies)=>{
       Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjNjU1MmYwOTZiZTg0YzhjNGQxY2JiNTUzNTQ0OWM0OCIsInN1YiI6IjY0YjhhMzRhNGQyM2RkMDEwNjk2MDYyNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.tgD4Z3dS5E-OYscZAemQhrKTUi8vp4WxCPpggbHfoK8'
     }
   };
-  const AllMoviesURL = `https://api.themoviedb.org/3/movie/popular?language=es-ES&page=${PaginaMovies}`;
+  const AllMoviesURL = `https://api.themoviedb.org/3/movie/popular?language=en-US&page=${PaginaMovies}`;
   const response = await fetch(AllMoviesURL, options);
   const data = await response.json();
   const {results} = data;

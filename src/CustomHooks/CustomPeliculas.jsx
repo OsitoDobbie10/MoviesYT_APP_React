@@ -1,6 +1,7 @@
 import CallContext from './CallContext'
 import { useState, useEffect , useMemo} from 'react'
 import { GetAllMovies } from "../API/GetMovies";
+import Allmovies from '../API/Allmovies';
 
 const CustomPeliculas = () => {
     const {arregleAllMovies,
@@ -39,8 +40,13 @@ const CustomPeliculas = () => {
       }
       
       const FilterMovies = (id)=>{
-        const arreglofilter = arregleAllMovies.filter((data)=>data.generos.includes(id))
-        setArreglofilter(arreglofilter)
+        if(id===1){
+          setArregleAllMovies(Allmovies)
+        }else{
+          const arreglofilter = arregleAllMovies.filter((data)=>data.generos.includes(id))
+          setArregleAllMovies(arreglofilter)
+        }
+        
        }
        const ChangeValue = ()=>{
         setCambiarfiltro(false);

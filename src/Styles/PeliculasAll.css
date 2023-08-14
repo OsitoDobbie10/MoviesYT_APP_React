@@ -22,6 +22,10 @@
   
 }
 
+.lista-movie>img{
+  margin: auto;
+}
+
 .lista-movie>img:hover{
   border: 2px solid violet;
   opacity: 0.7;
@@ -36,6 +40,7 @@
   width: 15px;
   height: 15px;
   margin-top: 5px;
+
 }
 
 .lista-movie>span{
