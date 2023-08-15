@@ -100,7 +100,7 @@ const App = () => {
         ,
         {
           path:'/Actors:personId/objeto',
-          element:<FiltroSerie/>
+          element:<FiltroPerson/>
         }
       ]
     }

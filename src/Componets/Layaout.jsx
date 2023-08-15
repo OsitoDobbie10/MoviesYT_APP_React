@@ -94,6 +94,8 @@ const Layaout = () => {
            className={`${location.pathname === rutas[1] ? 'text-yellow-300' : 'text-white'} block text-xl mt-3 hover:text-blue-400'`}>Peliculas</NavLink>
            <NavLink to={rutas[2]} 
            className={`${location.pathname === rutas[2] ? 'text-yellow-300' : 'text-white'} block text-xl mt-3 hover:text-blue-400'`}>TVseries</NavLink>
+           <NavLink to={rutas[3]} 
+           className={`${location.pathname === rutas[3] ? 'text-yellow-300' : 'text-white'} block text-xl mt-3 hover:text-blue-400'`}>Actors</NavLink>
         </nav>
         <div className='input'>
         <FaSistrix className=' text-yellow-400 mt-4 text-base'/>

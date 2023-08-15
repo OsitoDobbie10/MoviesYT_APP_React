@@ -1,0 +1,18 @@
+.ActorsMain{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: rgba(17,24,39,0.8);
+    color: white;
+}
+
+.headeractors{
+    margin-top: 10px;
+    margin-bottom: 20px
+}
+
+.headeractors>h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}

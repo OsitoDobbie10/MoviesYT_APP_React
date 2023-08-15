@@ -210,3 +210,28 @@ export const SearchMovies2 = async(search)=>{
   }))
   return newarray;
 }
+
+//Actores buscar
+export const Actor = async()=>{
+  const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjNjU1MmYwOTZiZTg0YzhjNGQxY2JiNTUzNTQ0OWM0OCIsInN1YiI6IjY0YjhhMzRhNGQyM2RkMDEwNjk2MDYyNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.tgD4Z3dS5E-OYscZAemQhrKTUi8vp4WxCPpggbHfoK8'
+    }
+  };
+  const url = `https://api.themoviedb.org/3/trending/person/day?language=es-ES`;
+  const response = await fetch(url, options);
+  const data = await response.json();
+  const {results} = data;
+  const newarray = results.map((paras)=>({
+    id: paras.id,
+    nombre: paras.name,
+    nombreOriginal: paras.original_name,
+    imagen: `https://image.tmdb.org/t/p/w300/${paras.profile_path}`,
+    popular: paras.popularity,
+    genero: paras.known_for_department,
+    Arreglo:paras.known_for
+  }));
+  return newarray;
+}

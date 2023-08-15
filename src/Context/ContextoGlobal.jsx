@@ -29,6 +29,10 @@ export function ProviderContextoGlobal ({children}){
    const [arreglopeliculas,setArreglopeliculas] = useState([]);
    const [arregloseries,setArregloseries] = useState([]);
 
+   //Actor
+   const [actores,setActores] = useState([]);
+   const [pageActor,setPageActor] = useState(1);
+
     const [vista1,setVista1] = useState(true);
     const [vista2,setVista2] = useState(true);
     const [vista3,setVista3] = useState(true);
@@ -77,6 +81,7 @@ export function ProviderContextoGlobal ({children}){
         setArreglogenres(gis7);
       })
     },[])
+  
 
     return <ContextoGlobal.Provider value={{
               buscarpeliculas,
@@ -114,7 +119,9 @@ export function ProviderContextoGlobal ({children}){
               stade2,
               setStade2,
               searchtv,setSearchtv,
-              searchtv2,setSearchtv2
+              searchtv2,setSearchtv2,
+              actores,setActores,
+              pageActor,setPageActor
                }}>
                {children}
            </ContextoGlobal.Provider>
