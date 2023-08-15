@@ -26,7 +26,7 @@ const FiltroSerie = () => {
    <FaFilm className='text-7xl text-red-700'/>
    <h1 className='color font-bold text-4xl mt-3'>Consulta de peliculas</h1>
     </div>
-    <button className='Boton' onClick={()=>Back5('/TV')}>Inicio</button>
+    <button className='Boton' onClick={()=>Back5('/TV')}>Series</button>
    <div className="FiltroHomePeliculas">
    <div className='Imagen-Banner'>
    <img src={imagen} alt={titulo} />
@@ -45,7 +45,7 @@ const FiltroSerie = () => {
    <button className='VerTrailer'>Ver Trailer</button>
    </div>
 
-    </div>
+  </div>
     <Footer/>
    </div>
   )
