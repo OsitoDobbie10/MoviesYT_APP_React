@@ -8,7 +8,6 @@ import { useNavigate } from 'react-router-dom';
 const PeliculasAll = (props) => {
  const {movies1,loading,changepage} = props;
  const navegar2 = useNavigate();
- //console.log(JSON.stringify(movies1,null,2))
   return (
     <div className='main' id='ContenedorMovies'>
       <ul className='listado'> 

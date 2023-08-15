@@ -235,3 +235,29 @@ export const Actor = async()=>{
   }));
   return newarray;
 }
+
+//Find Movies
+export const Video = async({id})=>{
+  const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjNjU1MmYwOTZiZTg0YzhjNGQxY2JiNTUzNTQ0OWM0OCIsInN1YiI6IjY0YjhhMzRhNGQyM2RkMDEwNjk2MDYyNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.tgD4Z3dS5E-OYscZAemQhrKTUi8vp4WxCPpggbHfoK8'
+    }
+  };
+  
+ const url = `https://api.themoviedb.org/3/movie/${id}/videos?language=en-US`;
+ const response = await fetch(url, options);
+ const data = await response.json();
+ const {results} = data;
+ const newarray = results.map((paras)=>({
+    id: paras.id,
+    nombre: paras.name,
+    nombreOriginal: paras.original_name,
+    imagen: `https://www.youtube.com/watch?v=${paras.key}`,
+    sitio: paras.site 
+  }));
+  return newarray;
+
+}
+
