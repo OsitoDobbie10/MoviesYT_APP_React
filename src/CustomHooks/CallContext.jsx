@@ -39,7 +39,9 @@ const CallContext = () => {
             searchtv,setSearchtv,
             searchtv2,setSearchtv2,
             actores,setActores,
-            pageActor,setPageActor
+            pageActor,setPageActor,
+            video,setVideo,
+            viewvideo,setViewvideo
             } = useContext(ContextoGlobal);
       const ShowResults = ()=>{
                 setStade2(!stade2);}
@@ -80,7 +82,9 @@ const CallContext = () => {
           searchtv,setSearchtv,
           searchtv2,setSearchtv2,
           actores,setActores,
-          pageActor,setPageActor}
+          pageActor,setPageActor,
+          video,setVideo,
+          viewvideo,setViewvideo}
 }
 
 export default CallContext 

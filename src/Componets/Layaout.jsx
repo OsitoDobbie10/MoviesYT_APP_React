@@ -30,7 +30,6 @@ const Layaout = () => {
   const close = ()=>{
     setStade(false);
   }
-  //console.log(searchmovies1)
   const debouncedGetMovies = useCallback(
     debounce(search => {
       console.log('search', search)

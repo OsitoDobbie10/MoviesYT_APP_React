@@ -6,8 +6,9 @@ import '../Styles/GetMovieHouse.css'
 import Estrellita from '../Files/estrella.png'
 import { ArrayMovies } from '../Componets/ArrayMovies'
 import Footer from '../Componets/Footer'
+import VideoView from '../CustomHooks/VideoView'
 const Item5 = () => {
-  const {searchmovies1,stade2} = CallContext();
+  const {searchmovies1,stade2,viewvideo,setViewvideo} = CallContext();
   const ParamsInicio = useParams();
   const BackHome = useNavigate();
   const getUserHOME = (id)=>{
@@ -15,6 +16,9 @@ const Item5 = () => {
   }
   const userSearch = getUserHOME(parseInt(ParamsInicio.homeId));
   const {id,imagen,resumen,titulo2,votopopular,fecharealizada} = userSearch
+  const Visibilty = ()=>{
+    setViewvideo(!viewvideo)
+  }
   return (
     <div className='FiltroHOME'>
       {
@@ -40,9 +44,12 @@ const Item5 = () => {
    </div>
    <span>Titulo Original</span>
    <h3>{titulo2}</h3>
-   <button className='VerTrailer'>Ver Trailer</button>
+   <button onClick={Visibilty} className='VerTrailer'>Ver Trailer</button>
    </div>
     </div>
+    {
+      viewvideo && <VideoView id={id}/>
+    }
     <Footer/>
    </div>
   )

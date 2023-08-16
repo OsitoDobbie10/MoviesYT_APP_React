@@ -6,9 +6,10 @@ import '../Styles/GetMovieHouse.css'
 import Estrellita from '../Files/estrella.png'
 import Footer from '../Componets/Footer'
 import { ArrayMovies } from './ArrayMovies';
+import VideoView from '../CustomHooks/VideoView'
 import CustomPeliculas from '../CustomHooks/CustomPeliculas';
 const FiltroPeliculas = () => {
-  const {searchmovies1,stade2} = CallContext();
+  const {searchmovies1,stade2,viewvideo,setViewvideo} = CallContext();
   const {arregleAllMovies} = CustomPeliculas();
   const Paramsmovie = useParams();
   const getUser = (id)=>{
@@ -16,7 +17,10 @@ const FiltroPeliculas = () => {
   }
   const usermovie = getUser(parseInt(Paramsmovie.moviesId))
   const BackPelis = useNavigate();
-  const {imagen,titulo,resumen,fecharealizada,votopopular} = usermovie
+  const Visibilty = ()=>{
+    setViewvideo(!viewvideo)
+  }
+  const {id,imagen,titulo,resumen,fecharealizada,votopopular} = usermovie
   return (
     <div className='FiltroHOME'>
       {
@@ -42,10 +46,14 @@ const FiltroPeliculas = () => {
    </div>
    <span>Titulo Original</span>
    <h3>{titulo}</h3>
-   <button className='VerTrailer'>Ver Trailer</button>
+   <button
+   onClick={Visibilty} 
+   className='VerTrailer'>Ver Trailer</button>
    </div>
-
-    </div>
+   </div>
+   {
+     viewvideo && <VideoView id={id}/>
+   }
     <Footer/>
    </div>
   

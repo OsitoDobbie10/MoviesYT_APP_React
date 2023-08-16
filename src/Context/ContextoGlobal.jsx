@@ -33,6 +33,10 @@ export function ProviderContextoGlobal ({children}){
    const [actores,setActores] = useState([]);
    const [pageActor,setPageActor] = useState(1);
 
+   //Video
+   const [video,setVideo] =useState([]);
+   const [viewvideo,setViewvideo] = useState(false);
+
     const [vista1,setVista1] = useState(true);
     const [vista2,setVista2] = useState(true);
     const [vista3,setVista3] = useState(true);
@@ -121,7 +125,9 @@ export function ProviderContextoGlobal ({children}){
               searchtv,setSearchtv,
               searchtv2,setSearchtv2,
               actores,setActores,
-              pageActor,setPageActor
+              pageActor,setPageActor,
+              video,setVideo,
+              viewvideo,setViewvideo
                }}>
                {children}
            </ContextoGlobal.Provider>

@@ -5,16 +5,20 @@ import {FaFilm} from 'react-icons/fa'
 import '../Styles/GetMovieHouse.css'
 import Estrellita from '../Files/estrella.png'
 import { ArrayMovies } from '../Componets/ArrayMovies'
+import VideoView from '../CustomHooks/VideoView'
 import Footer from '../Componets/Footer'
 const FiltroHome2 = () => {
-    const {peliculas2,searchmovies1,stade2} = CallContext();
+    const {peliculas2,searchmovies1,stade2,viewvideo,setViewvideo} = CallContext();
     const Params2 = useParams();
     const Back2 = useNavigate();
     const getUser = (id)=>{
         return peliculas2.find((user)=>user.id === id);
       }
     const user = getUser(parseInt(Params2.homeId))
-    const {fecharealizada,imagen,resumen,titulo,votopopular} = user;
+    const Visibilty = ()=>{
+      setViewvideo(!viewvideo)
+    }
+    const {id,fecharealizada,imagen,resumen,titulo,votopopular} = user;
     //Peliculas 2
   return (
     <div className='FiltroHOME'>
@@ -41,10 +45,14 @@ const FiltroHome2 = () => {
    </div>
    <span>Titulo Original</span>
    <h3>{titulo}</h3>
-   <button className='VerTrailer'>Ver Trailer</button>
+   <button 
+   onClick={Visibilty}
+   className='VerTrailer'>Ver Trailer</button>
    </div>
-
-    </div>
+  </div>
+  {
+    viewvideo && <VideoView id={id}/>
+  }
     <Footer/>
    </div>
   )

@@ -253,11 +253,11 @@ export const Video = async({id})=>{
  const newarray = results.map((paras)=>({
     id: paras.id,
     nombre: paras.name,
-    nombreOriginal: paras.original_name,
-    imagen: `https://www.youtube.com/watch?v=${paras.key}`,
+    url: `https://www.youtube.com/watch?v=${paras.key}`,
     sitio: paras.site 
   }));
   return newarray;
 
 }
+
 

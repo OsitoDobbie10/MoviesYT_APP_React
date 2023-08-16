@@ -1,0 +1,36 @@
+.VideoMain{
+    width: 100%;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.cerrarVideo{
+    position: absolute;
+    right: 40px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+.cerrarVideo:hover{
+    cursor: pointer;
+}
+
+.contenedor-video{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.vista{
+    margin-top: 50px;
+}
+
+.vista>h1{
+    text-align: center;
+    font-size: 25px;
+    font-weight:bold ;
+    color: yellow;
+}
