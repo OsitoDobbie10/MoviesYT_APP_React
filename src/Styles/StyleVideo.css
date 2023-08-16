@@ -1,7 +1,10 @@
 .VideoMain{
-    width: 100%;
-    margin-bottom: 40px;
-    position: relative;
+    position: absolute;
+    background-color: rgb(0 0 0 / 0.92);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .cerrarVideo{
@@ -9,6 +12,7 @@
     right: 40px;
     font-size: 30px;
     font-weight: bold;
+    top:30px;
 }
 
 
@@ -33,4 +37,5 @@
     font-size: 25px;
     font-weight:bold ;
     color: yellow;
+    margin-bottom: 20px;
 }
