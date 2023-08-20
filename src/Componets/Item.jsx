@@ -2,15 +2,13 @@ import React from 'react'
 import Estrella from '../Files/estrella.png'
 import '../Styles/Arreglo.css'
 import {useNavigate} from 'react-router-dom'
-const Item = (props) => {
+const Item1 = (props) => {
     const {data} = props
     const {id,titulo,imagen,fecharealizada,votopopular} = data
     const navegar = useNavigate()
   return (
     <div className='item'>
-        <img 
-        onClick={()=>navegar(`/Home/${id}/objeto`)} 
-        src={imagen} alt={titulo} />
+        <img onClick={()=>navegar(`/Home/${id}/objeto2`)} src={imagen} alt={titulo} />
         <h2>{titulo}</h2>
         <div className='Vista'>
         <img src={Estrella} alt="Estrella" />
@@ -21,4 +19,4 @@ const Item = (props) => {
   )
 }
 
-export default Item
+export default Item1

@@ -4,7 +4,7 @@ const Vista2 = (props) => {
     const {texto1,texto2,texto3} = props
     const {vista2,setVista2} = CallContext();
   return (
-        <div className='flex gap-2 mt-10 mb-2 ml-2'>
+        <div className='flex gap-2 mt-10 mb-2 ml-2 justify-center'>
         <h2 className='text-2xl'> {texto1}: </h2>
         <button 
         onClick={()=>{setVista2(true)}}

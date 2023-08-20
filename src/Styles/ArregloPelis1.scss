@@ -1,0 +1,37 @@
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .container {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+
+
+    .swiperContainer {
+      overflow-x: hidden;
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .swiper-pagination-bullet {
+    background-color: black;
+    height: 10px;
+    width: 10px;
+    margin-right: 6px;
+    opacity: 0.5;
+    cursor: pointer;
+    border-radius: 100%;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: rgb(255, 162, 0);
+    opacity: 1;
+  }
+}

@@ -19,6 +19,8 @@
     "react-player": "^2.12.0",
     "react-router-dom": "^6.14.2",
     "react-youtube": "^10.1.0",
+    "sass": "^1.66.1",
+    "swiper": "^10.2.0",
     "use-debounce": "^9.0.4"
   },
   "devDependencies": {

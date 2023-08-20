@@ -52,7 +52,7 @@ const Inicio = () => {
        <ArregloMoviesHome3 peliculas={mostRanted}/>:
        <ArregloMoviesHome4 peliculas={tvRanted}/>
       }
-      <h1 style={{fontWeight:'bold',marginTop: '10px', fontSize: '30px'}}>Proximos</h1>
+      <h1 style={{fontWeight:'bold',marginTop: '10px', fontSize: '30px', textAlign:'center', marginBottom:'10px'}}>Proximos</h1>
       <ArregloMoviesHome1 peliculas={upcomingmovies}/>
       <Footer/>
     </div>
