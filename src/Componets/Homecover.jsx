@@ -1,22 +1,43 @@
-import Cover1 from '../Files/PeliculaCover.png';
-import Cover2 from '../Files/PeliculaCover2.png';
-import '../Styles/Cover.css'
-
+import {Swiper, SwiperSlide} from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y,EffectCube} from 'swiper/modules';
+import Covermovies from '../API/Covermovies'
+import '../Styles/Cover.css';
+import 'swiper/css';
+import 'swiper/swiper-bundle.css'
+import 'swiper/css/effect-cube';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 const Homecover = () => {
-  
   return (
-    <div className='cover'>
-    <div className="image1">
-    <img src={Cover1} alt="Cover1" />
-    </div>
-    <div className="image2">
-    <img src={Cover2} alt="cover2" />
-    </div>
-    <div className='CONTENIDO'>
-    <h1 className=' font-bold text-white text-5xl text-center animate-fade animate-twice animate-ease-in-out'>Aplicacion de consulta de peliculas</h1>
-    <h2 className='font-bold text-white text-4xl text-center animate-fade animate-twice animate-ease-in-out'>Usando la API de Peliculas YT</h2>  
-    </div>
-    </div>
+    <Swiper
+      modules={[Navigation, Pagination, Scrollbar, A11y,EffectCube]}
+      spaceBetween={50}
+      slidesPerView={1}
+      navigation
+      pagination={{ clickable: true }}
+      scrollbar={{ draggable: true }}
+      onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() => console.log('slide change')}
+      effect={"cube"}
+      cubeEffect={{
+        shadow: true,
+        slideShadows: true,
+        shadowOffset: 20,
+        shadowScale: 0.94,
+      }}
+    >
+      {
+        Covermovies.map((swiper)=>{
+          return <SwiperSlide key={swiper.image}>
+                  <div className="DatosCover">
+                 <h1>Hecho por Carlos Archaga <br /> Analista GIS y desarrollador Front End</h1>
+                 <img className="coverimage" src={swiper.image} alt={swiper.title} />
+                 </div>
+                </SwiperSlide>
+        })
+      }
+    </Swiper>
   )
 }
 

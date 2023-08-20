@@ -1,76 +1,33 @@
-.cover{
-    display: flex;
+.DatosCover{
     width: 100%;
     position: relative;
-    height: 400px;
-
 }
 
-.cover>.image1{
-    width: 50%;
-}
-
-.cover>.image2{
-    width: 50%;
-}
-
-.cover>.image1>img{
-    width: 100%;
-    height: 100%;
-    opacity: 0.4;
-}
-
-.cover>.image2>img{
-    width: 100%;
-    height: 100%;
-    opacity: 0.4;
-}
-
-.cover>.CONTENIDO{
+.DatosCover>h1{
     position: absolute;
     top: 35%;
     left: 20%;
+    font-size: 45px;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
     z-index: 100;
 }
 
-@media screen and (max-width:768px){
-    .cover{
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-        position: relative;
-        height: 350px;
-    }
+.DatosCover>.coverimage{
+    opacity: 0.6;
+    width: 100%;
+}
 
-    .cover>.image1{
-        width: 100%;
-        height: 50%;
-    }
-    
-    .cover>.image2{
-        width: 100%;
-        height: 50%;
-    }
-
-    .cover>.CONTENIDO{
+@media screen and (max-width:767px){
+    .DatosCover>h1{
         position: absolute;
-        top: 25%;
-        left: 2%;
-        z-index: 100;
-    }
-
-    .CONTENIDO>h1{
-        font-size: 25px;
-        font-weight: bolder;
-        text-align: center;
-        color: rgb(234, 234, 239);
-        opacity: 1;
-    }
-    .CONTENIDO>h2{
+        top: 20%;
+        left:13px;
         font-size: 20px;
         font-weight: bolder;
+        color: white;
         text-align: center;
-        color: rgb(234, 234, 239);
-        opacity: 1;
+        z-index: 100;
     }
 }
